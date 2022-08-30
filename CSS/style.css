@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --body-color: #202020;
+  --color-letter: #fff;
+  --color-button: #2c2c4b;
+  --font-size-small: 13px;
+  --font-size-medium: 21px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*--- HEADER ---*/
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 22px;
+  height: 1px;
+  background: #fff;
+  margin: 7px;
+  transition: 0.3s;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul a {
+  padding: 0 0.5rem;
+  color: #fff;
+  transition: all 0.6s;
+}
+
+nav li a:hover {
+  color: rgb(255, 144, 144);
+  opacity: 0.7;
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-4px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-4px, -8px);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 40vw;
+    height: 25vh;
+    background: rgb(98, 98, 98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    border-radius: 20px;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 1;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/*--- Home ---*/
+
+.home {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 2rem 0 2rem;
+}
+
+.listras {
+  width: 140px;
+  height: 580px;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    #b1060e 0,
+    #b1060e 50px,
+    transparent 50px,
+    transparent 90px,
+    #b1060e 90px,
+    #b1060e 140px
+  );
+  transform: skewX(45deg);
+  left: 185px;
+}
+
+.home h1 {
+  line-height: 4rem;
+  font-size: 54px;
+}
+
+.logo {
+  margin-left: 15rem;
+}
+
+.redes {
+  margin-top: 5rem;
+}
+
+.redes a {
+  padding: 0 0.5rem;
+  color: #fff;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+.redes a:hover {
+  color: rgb(255, 0, 0);
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .home h1 {
+    line-height: 2rem;
+    font-size: 24px;
+  }
+
+  .home a {
+    margin: 5rem;
+  }
+}
+
+/*--- ABOUT ---*/
+
+.about {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.title {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 23px;
+}
+
+.text-left {
+  width: 350px;
+  height: auto;
+  font-size: 18px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text img {
+  width: 395px;
+  height: 460px;
+  margin-left: 15rem;
+}
+
+@media screen and (max-width: 900px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .text img {
+    width: 250px;
+    height: 300px;
+    margin-left: 0rem;
+    margin-top: 2rem;
+  }
+}
+
+/*--- MISSION-VISION ---*/
+
+.mission-vision {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+  justify-content: space-evenly;
+}
+
+.mission {
+  width: 15%;
+  height: auto;
+  text-align: center;
+}
+
+.vision {
+  width: 15%;
+  height: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .mission {
+    width: 30%;
+    font-size: 14px;
+  }
+
+  .vision {
+    width: 30%;
+    font-size: 14px;
+  }
+}
+
+/*--- EQUIPE ---*/
+
+.carousel {
+  height: 400px;
+  position: relative;
+  justify-content: center;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.card {
+  width: 13rem;
+  height: 20rem;
+  position: relative;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-img-wrapper img {
+  opacity: 0.5;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2rem;
+  text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+}
+
+.card-info h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #eee;
+}
+
+.card-info p {
+  color: #eee;
+  font-weight: 400;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.card:hover .card-info {
+  bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+}
+
+/*--- PARCEIROS ---*/
+
+.images {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.images img {
+  padding: 1rem;
+}
+
+/*--- FOOTER ---*/
+
+footer {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.img-footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
