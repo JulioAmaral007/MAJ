@@ -134,11 +134,10 @@ nav li a:hover {
 
 /*--- FOOTER ---*/
 
-footer {
+.footer {
   text-align: center;
   justify-content: center;
   width: 100%;
-  margin-top: 3rem;
   position: absolute;
   z-index: 1;
 }
@@ -146,15 +145,12 @@ footer {
 .img-footer {
   position: relative;
   width: 100%;
-  height: auto;
 }
 
 @media screen and (max-width: 900px) {
-  footer {
+  .footer {
     text-align: center;
     justify-content: center;
-    width: 100%;
-
     position: absolute;
     z-index: 1;
   }
@@ -162,6 +158,6 @@ footer {
   .img-footer {
     position: relative;
     width: 100%;
-    margin-top: 2rem;
+    height: 135px;
   }
 }

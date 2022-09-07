@@ -19,16 +19,112 @@
 }
 
 @media screen and (max-width: 900px) {
+  .home {
+    display: flex;
+    padding: 2rem 2rem 0 2rem;
+  }
+
   .logo {
-    display: none;
+    margin: auto;
+    width: 50%;
   }
 
   .home h1 {
     line-height: 2rem;
     font-size: 24px;
   }
+}
 
-  .home a {
-    margin: 5rem;
+/*--- Services ---*/
+
+.services-card {
+  width: 90%;
+  margin: auto;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 8rem 0;
+}
+
+.start {
+  justify-content: end;
+  padding-right: 3rem;
+}
+
+.svg {
+  width: 350px;
+  height: 250px;
+}
+
+.card {
+  width: 500px;
+  height: 230px;
+  background-color: #fff;
+  color: black;
+  border-radius: 12px;
+}
+
+.card-title {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-info {
+  width: 80%;
+  padding-right: 15px;
+  margin: 25px 0;
+  margin-left: 20%;
+  justify-content: end;
+}
+
+@media screen and (max-width: 900px) {
+  .services-card {
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4rem 0;
+  }
+
+  .start {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .svg {
+    display: none;
+  }
+
+  .card {
+    max-width: 500px;
+    min-height: 230px;
+    background-color: #fff;
+    color: black;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .card-info {
+    width: 90%;
+    padding-right: 15px;
+    margin: 25px 0;
+    margin-left: 10%;
+    justify-content: end;
   }
 }

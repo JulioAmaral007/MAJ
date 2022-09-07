@@ -417,8 +417,8 @@
   }
 
   .images img {
-    max-width: 120px;
+    max-width: auto;
     height: auto;
-    padding: 1rem;
+    padding: 1.4rem;
   }
 }
